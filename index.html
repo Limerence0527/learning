@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="從拖延到主動學習：以微積分、物理、AI 專案為例，將 ewant《學會學：學習之道》的理論轉成可以實際操作的學習工具。">
+  <title>學會學｜我的學習實驗室</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="網站導覽">
+    <div class="brand"><div class="brand-emblem" aria-hidden="true">學</div><div><strong>學會學</strong><small>LEARNING LAB</small></div></div>
+    <div class="nav-label">EXPLORE / 探索</div>
+    <nav class="nav-list" id="navigation" aria-label="主要選單">
+      <button data-page="home" class="nav-link is-active" aria-current="page"><span aria-hidden="true">⌂</span> 學習實驗室</button>
+      <button data-page="story" class="nav-link"><span aria-hidden="true">✦</span> 我的學習故事</button>
+      <button data-page="theory" class="nav-link"><span aria-hidden="true">▦</span> 學習科學圖鑑</button>
+      <button data-page="tools" class="nav-link"><span aria-hidden="true">◷</span> 實作工具箱</button>
+      <button data-page="experiment" class="nav-link"><span aria-hidden="true">✓</span> 七日學習實驗</button>
+      <button data-page="reflection" class="nav-link"><span aria-hidden="true">✎</span> 成果與反思</button>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="side-note"><span class="online-dot"></span> 一個持續進行中的學習實驗</div>
+      <p>ewant《學會學：學習之道》<br>榮譽作業 · 2026</p>
+      <p class="muted tiny">作品以學習內容為核心；所有互動紀錄只儲存在你的瀏覽器。</p>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="crumb"><span>THE LEARNING JOURNAL</span><span class="crumb-divider">/</span><strong id="crumb-title">學習實驗室</strong></div>
+      <div class="top-controls"><span class="live-pill"><span class="online-dot"></span> LEARNING IN PROGRESS</span><button class="mobile-menu" id="mobile-menu" aria-expanded="false" aria-controls="navigation" aria-label="開啟導覽選單">☰</button></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="page-home" class="page" aria-labelledby="home-title">
+        <div class="hero card">
+          <div class="hero-copy">
+            <div class="eyebrow">HONORS PROJECT · LEARNING HOW TO LEARN</div>
+            <h1 id="home-title">學習，不是為了<br><em>看起來很努力。</em></h1>
+            <p>我曾經知道自己應該讀書，卻忍不住把時間交給遊戲和短影片；也曾經為了一個想做的 AI 專案，願意反覆測試、修正錯誤。這個網站想回答一個問題：<strong>能不能把我在專案裡的學習方式，帶回微積分和物理？</strong></p>
+            <div class="hero-actions"><button class="btn btn-primary" data-go="story">閱讀我的故事 <span aria-hidden="true">↗</span></button><button class="btn btn-outline" data-go="tools">開始 25 分鐘 <span aria-hidden="true">↗</span></button></div>
+          </div>
+          <div class="hero-art" aria-hidden="true"><span class="arc arc-a"></span><span class="arc arc-b"></span><span class="art-disc"></span><span class="art-star star-a">✳</span><span class="art-star star-b">✦</span><span class="art-star star-c">✳</span><span class="art-label">LEARN<br>GROW<br>REPEAT.</span></div>
+        </div>
+        <div class="intro-strip">
+          <span class="eyebrow">01 / 為什麼做這個網站</span>
+          <p>從「我就是不自律」到「我能設計一個更容易開始的系統」。這是我把課程中的<strong>習慣迴路、主動回憶、記憶組塊、專注與發散模式、自我效能、教學相長</strong>轉化成實際方法的紀錄。它不是成功學指南，而是一場可測量、可以失敗、也可以修正的實驗。</p>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">MY LEARNING SNAPSHOT</span><h2>把進步，變成看得見的事。</h2></div><p>由你在本裝置的實際操作更新，沒有預填成果。</p></div>
+        <div class="stats-grid">
+          <article class="stat card"><span>已完成的專注區段</span><strong id="stat-focus">0</strong><small>個番茄鐘</small><span class="stat-icon">◷</span></article>
+          <article class="stat card"><span>已複習的知識卡片</span><strong id="stat-cards">0</strong><small>次主動回憶</small><span class="stat-icon">▤</span></article>
+          <article class="stat card"><span>七日實驗完成進度</span><strong id="stat-days">0 <small>/ 7</small></strong><small>天學習紀錄</small><span class="stat-icon">✓</span></article>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">THE BIG IDEA</span><h2>從生活經驗，走進學習科學。</h2></div></div>
+        <div class="feature-grid">
+          <article class="feature card feature-sage"><span class="feature-no">01 / THE PROBLEM</span><div class="feature-glyph" aria-hidden="true">↝</div><h3>明明知道要讀書，卻總是開始不了</h3><p>面對高難度內容時，短影片帶來的即時回饋往往比遙遠的考試成果更吸引人。我試著從習慣的觸發方式，而不是單靠自責，重新理解拖延。</p><button class="text-link" data-go="story">閱讀學習困境 <span>↗</span></button></article>
+          <article class="feature card feature-sand"><span class="feature-no">02 / THE CONTRAST</span><div class="feature-glyph" aria-hidden="true">⌘</div><h3>為什麼寫程式時，我反而願意持續試錯？</h3><p>曾從安裝工具開始，一步步讓本機的 AI 虛擬辦公室跑起來。每次錯誤都有具體線索，讓「下一步怎麼做」變得清楚。</p><button class="text-link" data-go="story">閱讀專案經驗 <span>↗</span></button></article>
+          <article class="feature card feature-cream"><span class="feature-no">03 / THE EXPERIMENT</span><div class="feature-glyph" aria-hidden="true">◎</div><h3>我把學習變成一個可測試的系統</h3><p>以 25 分鐘為單位，結合不看答案的解題、錯題回顧、交錯練習與自我解釋。先記錄真實表現，再談改善。</p><button class="text-link" data-go="experiment">查看七日實驗 <span>↗</span></button></article>
+        </div>
+        <div class="quote-card card"><div class="quote-mark">“</div><blockquote>真正的學會，不是看過多少次答案，<br>而是拿掉答案以後，我還能不能自己做出來。</blockquote><span>— 我對「能力錯覺」這一課的理解</span></div>
+        <div class="section-heading"><div><span class="eyebrow">START HERE</span><h2>你也可以跟著做。</h2></div></div>
+        <div class="steps-grid">
+          <button class="step-card card" data-go="theory"><span>STEP 01</span><strong>理解原理</strong><small>為什麼舊方法容易失效？</small><b aria-hidden="true">↗</b></button>
+          <button class="step-card card" data-go="tools"><span>STEP 02</span><strong>親手練習</strong><small>計時、回憶、整理錯題。</small><b aria-hidden="true">↗</b></button>
+          <button class="step-card card" data-go="experiment"><span>STEP 03</span><strong>追蹤改變</strong><small>七天，每天只求下一步。</small><b aria-hidden="true">↗</b></button>
+        </div>
+      </section>
+      <section id="page-story" class="page" hidden aria-labelledby="story-title">
+        <div class="page-intro"><span class="eyebrow">02 / MY LEARNING JOURNEY</span><h1 id="story-title">同一個人，<br><em>兩種截然不同的學習狀態。</em></h1><p>我想用真實經歷，而不是假裝已經成功戒掉拖延，說明《學會學》對我的意義。</p></div>
+        <article class="story-section card"><div class="story-index"><span>CHAPTER 01</span><strong>學習卡關</strong></div><div class="story-body"><h2>「我知道要讀，但還是沒有讀。」</h2><p>我正在準備微積分、普通物理，以及未來的轉學考。科目很重要，我也很在意未來的生活與選擇權，但有時醒來後先打開遊戲、Instagram、Reels 或 Shorts，時間就在一支接一支的影片裡流走。</p><p>拖延最難受的地方不是沒有完成進度，而是事後的焦慮。愈擔心進度落後，下一次打開課本時的壓力就可能愈大，形成「壓力 → 逃避 → 暫時放鬆 → 更大壓力」的循環。</p><div class="insight"><strong>課程連結｜習慣迴路 + 自我效能</strong><p>我開始把它看成需要調整提示、慣例、獎勵與信念的行為問題。與其用「我不適合讀數學」定義自己，更值得問的是「哪個行為可以調整？我能先完成哪一小步？」</p></div></div></article>
+        <article class="story-section card"><div class="story-index"><span>CHAPTER 02</span><strong>學習能動性</strong></div><div class="story-body"><h2>寫 AI 專案時，我為什麼能一直嘗試？</h2><p>我曾經為了建立一個有虛擬辦公室畫面、能讓多個 AI 員工討論的專案，在 Windows 上從安裝 Node.js、Git、Ollama 開始，再到下載 AgentOffice 專案、安裝套件、建置並啟動服務。過程中也遇過指令找不到、環境設定、程式修改等問題。</p><p>最後我成功打開虛擬辦公室，也讓三位 AI 依序討論。我沒有因為第一次出錯就認為自己「天生不適合程式設計」，反而會看錯誤訊息、換方法，再試一次。這跟我面對微積分難題時容易感到挫折，形成很強烈的對照。</p><div class="insight"><strong>課程連結｜記憶組塊 + 可控歸因 + 刻意練習</strong><p>在專案中，我把大任務拆成可驗證的小步驟：先確認安裝成功，再跑一條命令，再測一個功能。錯誤是線索，不是能力判決。我想把同樣的思考方式用在數學與物理。</p></div></div></article>
+        <article class="story-section card"><div class="story-index"><span>CHAPTER 03</span><strong>重新定義進步</strong></div><div class="story-body"><h2>不是突然變得自律，而是重新設計起點。</h2><p>課程讓我注意到，讀書時的「感覺很熟悉」，和真正能在考試上獨立解題，可能是兩回事。看老師解題時覺得合理，不等於自己可以從空白紙開始推導；反覆看同類型例題，也不代表能判斷下一題該用哪一種方法。</p><p>因此我決定把學習成果從「今天坐在桌前多久」改成「今天有沒有在不看答案時成功回憶、推導或解題」。以下工具與七日計畫是為了驗證這個想法；在有實際紀錄之前，我不會把預期效果寫成已完成的成果。</p><div class="insight"><strong>我的轉變</strong><p>我不需要先證明自己是很會讀書的人，才有資格開始學習。先做一個可控制的小實驗，結果不理想就修正方法，才比較接近真正的自主學習。</p></div></div></article>
+      </section>
+      <section id="page-theory" class="page" hidden aria-labelledby="theory-title">
+        <div class="page-intro"><span class="eyebrow">03 / THE SCIENCE OF LEARNING</span><h1 id="theory-title">八張學習概念卡，<br><em>重新認識「學會」。</em></h1><p>課堂不是只提供名詞，而是提供理解問題、設計行動與檢驗結果的方法。以下每個觀念都有課程解釋、個人情境與可執行的行動。</p></div>
+        <div class="concept-grid">
+          <article class="concept card"><span class="concept-number">01 · HABIT LOOP</span><h3>習慣迴路與拖延</h3><p>提示 → 慣例 → 獎勵 → 信念。逃避難題時，滑手機能快速消除不舒服的感覺，久而久之便可能自動化。</p><div class="concept-action"><b>我的應用</b><p>讓「坐下、手機離開視線、按下 25 分鐘」成為新提示；完成後才安排短休息，藉由完成紀錄累積信念。</p></div></article>
+          <article class="concept card"><span class="concept-number">02 · FOCUSED & DIFFUSE</span><h3>專注模式與發散模式</h3><p>專注模式讓人沿著已知路徑深入思考；離開難題後，發散模式可能協助建立新的聯想。休息不是完全不學習。</p><div class="concept-action"><b>我的應用</b><p>難題先認真嘗試、留下卡住的步驟；短暫走動後再回來，而不是無意識地滑到忘記原本題目。</p></div></article>
+          <article class="concept card"><span class="concept-number">03 · RECALL</span><h3>主動回憶與能力錯覺</h3><p>反覆閱讀帶來熟悉感，但熟悉不等於能夠提取、解釋與運用。真正的自測需要拿掉教材與答案。</p><div class="concept-action"><b>我的應用</b><p>看完導數或積分的解題範例後合上書，自己推一次；不會的地方標記出來，而不是再看十遍。</p></div></article>
+          <article class="concept card"><span class="concept-number">04 · CHUNKING</span><h3>記憶組塊</h3><p>透過理解、練習與提取，原本分散的知識可以連成較完整的程序。熟練後不必每次都從零處理細節。</p><div class="concept-action"><b>我的應用</b><p>把「辨認題型 → 選擇方法 → 執行步驟 → 檢查答案」練成一組，而不是只記單一公式。</p></div></article>
+          <article class="concept card"><span class="concept-number">05 · SPACING & INTERLEAVING</span><h3>間隔重複與交錯練習</h3><p>把複習分散到不同日期，比只在同一天重複熟悉內容更能維持長期提取。不同題型交錯能練習判斷「何時該用哪一招」。</p><div class="concept-action"><b>我的應用</b><p>錯題隔天、數天後重新解；把導數、積分、物理概念混合抽題，避免一看到題型就直接套固定模式。</p></div></article>
+          <article class="concept card"><span class="concept-number">06 · ATTRIBUTION</span><h3>歸因、自我效能與成長</h3><p>如果把失敗一律解釋為穩定、無法控制的能力不足，容易削弱再次嘗試的意願。把注意力放在可改變的策略更有幫助。</p><div class="concept-action"><b>我的應用</b><p>把「我不是這塊料」改成「我還不會辨認這種題型，先找出缺哪一個觀念」。也不把所有失敗簡化為不夠努力。</p></div></article>
+          <article class="concept card"><span class="concept-number">07 · LEARNING BY TEACHING</span><h3>教學相長與團隊盲點</h3><p>準備教別人的人，會更主動組織概念與找出重點。和他人討論則能發現自己沒注意的假設、錯誤與解釋漏洞。</p><div class="concept-action"><b>我的應用</b><p>用白話對同學或 AI 解釋一道題目的「為什麼」；若對方提出反例卻回答不出來，就代表需要回頭補強。</p></div></article>
+          <article class="concept card"><span class="concept-number">08 · SLEEP & PRACTICE</span><h3>睡眠、練習與考試策略</h3><p>學習需要反覆練習與適當休息。考試時可先簡短接觸難題，卡住後處理簡單題，再回頭重新檢視；但仍需衡量個人狀況。</p><div class="concept-action"><b>我的應用</b><p>不把熬夜視為唯一補救方式；考前用限時混合題與主動回憶檢驗，避免只靠看過答案的自信。</p></div></article>
+        </div>
+        <div class="note-box"><h3>課程中的一個關鍵研究</h3><p>課程提到 Nestojko、Bui、Kornell 與 Bjork（2014）的研究：被告知「之後要教給別人」的受試者，即使最後其實沒有教學，對文章重點也比純粹準備考試者有更好的記憶表現。這提醒我，準備輸出可以改變輸入時的方式。</p><p><small>提醒：左右腦的功能差異不能簡化成「左腦負責邏輯、右腦負責創造」。課程借此提醒我們需要檢查整體合理性，實際認知活動涉及多個腦區合作。</small></p></div>
+      </section>
+      <section id="page-tools" class="page" hidden aria-labelledby="tools-title">
+        <div class="page-intro"><span class="eyebrow">04 / PRACTICAL TOOLKIT</span><h1 id="tools-title">把學習方法，<br><em>變成能操作的習慣。</em></h1><p>這些工具不是裝飾。計時、回答、評估與錯題都能記錄在此裝置。它們幫助我檢驗「我到底做了什麼」，而不是只感覺自己有在學。</p></div>
+        <div class="tool-grid">
+          <article class="tool-card card timer-card">
+            <div class="tool-header"><div><span class="eyebrow">TOOL 01 / FOCUS</span><h2>番茄專注鐘</h2></div><span class="tool-icon" aria-hidden="true">◷</span></div>
+            <p class="tool-hint">把注意力從「今天要讀完一整章」轉到「現在這 25 分鐘，先做一小步」。</p>
+            <div class="segmented" role="group" aria-label="計時模式"><button id="mode-focus" class="selected" aria-pressed="true">專注時間</button><button id="mode-break" aria-pressed="false">短暫休息</button></div>
+            <div class="timer-ring" id="timer-ring"><div class="timer-inner"><span id="timer-label">FOCUS SESSION</span><strong id="timer-display" role="timer" aria-live="off">25:00</strong><small id="timer-subtitle">只專注在下一步</small></div></div>
+            <div class="timer-options"><label for="focus-duration">專注長度</label><select id="focus-duration"><option value="15">15 分鐘</option><option value="25" selected>25 分鐘</option><option value="45">45 分鐘</option></select><span>休息 5 分鐘</span></div>
+            <div class="timer-actions"><button class="btn btn-primary" id="timer-toggle">開始專注</button><button class="btn btn-outline" id="timer-reset">重設</button></div>
+            <p class="tool-footnote">只在專注時間完整結束後計入統計。切換頁面不會中止計時；關閉分頁則不保證能保留進度。</p>
+          </article>
+          <article class="tool-card card flash-card">
+            <div class="tool-header"><div><span class="eyebrow">TOOL 02 / ACTIVE RECALL</span><h2>主動回憶卡片</h2></div><span class="tool-icon" aria-hidden="true">▤</span></div>
+            <p class="tool-hint">不是再看一次講義；先讓大腦自己把答案找出來，才翻卡檢查。</p>
+            <div class="flash-top"><span id="flash-index">第 1 張</span><span id="flash-due">待複習 12 張</span></div>
+            <button class="flash-face" id="flash-face" aria-label="翻轉記憶卡片"><span class="flash-kicker" id="flash-kicker">QUESTION / 問題</span><strong id="flash-content">習慣迴路的四個要素是什麼？</strong><small id="flash-tip">點擊卡片，查看答案 ↗</small></button>
+            <div class="flash-actions" id="flash-actions"><button class="btn btn-outline" id="flash-prev">上一張</button><button class="btn btn-primary" id="flash-flip">查看答案</button><button class="btn btn-outline" id="flash-next">下一張</button></div>
+            <div class="flash-grade" id="flash-grade" hidden><button class="btn btn-outline" id="flash-again">還不熟悉 · 明天再複習</button><button class="btn btn-primary" id="flash-good">我能回答 · 延後複習</button></div>
+            <p class="tool-footnote" id="flash-message">先在心中回答，再打開卡片。選擇掌握程度後會安排下次複習。</p>
+          </article>
+        </div>
+        <div class="tool-grid secondary-grid">
+          <article class="tool-card card">
+            <div class="tool-header"><div><span class="eyebrow">TOOL 03 / LEARNING CHECK</span><h2>不是看懂，是做得出來</h2></div><span class="tool-icon" aria-hidden="true">?</span></div>
+            <p class="tool-hint">六題情境式課程測驗，答完會立即說明。答案不預先顯示，避免能力錯覺。</p>
+            <div id="quiz-area"><span class="quiz-progress" id="quiz-progress">問題 1 / 6</span><h3 id="quiz-question">題目載入中…</h3><div id="quiz-choices" class="quiz-choices"></div><div id="quiz-feedback" class="quiz-feedback" hidden></div><button id="quiz-next" class="btn btn-primary" hidden>下一題</button></div>
+          </article>
+          <article class="tool-card card">
+            <div class="tool-header"><div><span class="eyebrow">TOOL 04 / MISTAKE JOURNAL</span><h2>錯題不是失敗紀錄</h2></div><span class="tool-icon" aria-hidden="true">✎</span></div>
+            <p class="tool-hint">真正重要的是「錯在哪裡、下一次怎麼辨認」。記完後，隔幾天再不看答案重做。</p>
+            <form id="mistake-form" class="mistake-form">
+              <label>科目 <select name="subject" required><option>微積分</option><option>普通物理</option><option>程式設計</option><option>其他</option></select></label>
+              <label>題目／卡住的地方 <textarea name="problem" maxlength="450" rows="2" placeholder="例如：看到分部積分題時，不知道 u 和 dv 怎麼選" required></textarea></label>
+              <label>原因與下一步 <textarea name="fix" maxlength="450" rows="2" placeholder="例如：先比較不同選法，再不看解答重做一次" required></textarea></label>
+              <button class="btn btn-primary" type="submit">新增我的學習盲點</button>
+            </form>
+            <div class="mistake-list" id="mistake-list"><p class="empty">還沒有紀錄。第一個錯誤，也可以成為進步的起點。</p></div>
+          </article>
+        </div>
+        <div class="note-box"><h3>關於資料與真實性</h3><p>你在這裡輸入的錯題、完成的番茄鐘與卡片紀錄都使用瀏覽器本機儲存，不需要登入帳號，也不會送往外部伺服器。若清除網站資料或更換瀏覽器，紀錄可能消失。此網站的數據不代表作者已完成的學習實驗。</p><button class="btn btn-outline btn-sm" id="export-data">下載我的學習紀錄（JSON）</button></div>
+      </section>
+      <section id="page-experiment" class="page" hidden aria-labelledby="experiment-title">
+        <div class="page-intro"><span class="eyebrow">05 / 7-DAY EXPERIMENT</span><h1 id="experiment-title">與其追求完美，<br><em>不如連續做七次實驗。</em></h1><p>這是我設計的可重複執行計畫，<strong>不是已經完成的成果報告</strong>。每天有一個主要目標和一個可以留下的證據。</p></div>
+        <div class="experiment-progress card"><div><span class="eyebrow">YOUR EXPERIMENT</span><h3>七日進度</h3><p>可依自己的節奏進行；完成勾選只代表你自己確認做過這一步。</p></div><div class="progress-right"><strong id="experiment-count">0 / 7</strong><div class="progress-track"><div id="experiment-bar"></div></div></div></div>
+        <div class="day-list" id="day-list">
+          <article class="day-card card" data-day="0"><div class="day-marker">DAY <b>01</b></div><div><h3>觀察拖延的提示</h3><p>記下今天哪個時刻最想滑手機，以及前一刻正在做什麼。不評論自己，先找模式。</p><small>課程：習慣迴路 · 自我觀察</small></div><label class="day-done"><input type="checkbox" data-day-check="0"><span>完成</span></label></article>
+          <article class="day-card card" data-day="1"><div class="day-marker">DAY <b>02</b></div><div><h3>開始一個番茄鐘</h3><p>把手機放遠，選一個最小任務，專心 25 分鐘。留下任務名稱和完成情況。</p><small>課程：專注過程 · 番茄工作法</small></div><label class="day-done"><input type="checkbox" data-day-check="1"><span>完成</span></label></article>
+          <article class="day-card card" data-day="2"><div class="day-marker">DAY <b>03</b></div><div><h3>不看答案解出一道題</h3><p>選一題微積分或物理習題，先自己嘗試，完成後再對答案；標記仍不懂的步驟。</p><small>課程：主動回憶 · 能力錯覺</small></div><label class="day-done"><input type="checkbox" data-day-check="2"><span>完成</span></label></article>
+          <article class="day-card card" data-day="3"><div class="day-marker">DAY <b>04</b></div><div><h3>把舊題和新題混在一起</h3><p>挑兩種不同題型交替練習，先判斷方法，再動筆運算；記錄選錯方法的原因。</p><small>課程：交錯練習 · 記憶組塊</small></div><label class="day-done"><input type="checkbox" data-day-check="3"><span>完成</span></label></article>
+          <article class="day-card card" data-day="4"><div class="day-marker">DAY <b>05</b></div><div><h3>回頭複習前幾天的內容</h3><p>不看書回答第三天的重點，或重新解當時的錯題。先提取，再查漏。</p><small>課程：間隔複習 · 提取練習</small></div><label class="day-done"><input type="checkbox" data-day-check="4"><span>完成</span></label></article>
+          <article class="day-card card" data-day="5"><div class="day-marker">DAY <b>06</b></div><div><h3>用自己的話教會一個人</h3><p>選一個概念，試著講給同學聽，或對著錄音說明；找出講不清楚的地方。</p><small>課程：教學相長 · 自我解釋</small></div><label class="day-done"><input type="checkbox" data-day-check="5"><span>完成</span></label></article>
+          <article class="day-card card" data-day="6"><div class="day-marker">DAY <b>07</b></div><div><h3>驗證，而不是替自己打分數</h3><p>整理七天的紀錄：哪些方法真的有幫助？哪個提示仍讓我分心？下一輪只改一件事。</p><small>課程：後設認知 · 可控歸因</small></div><label class="day-done"><input type="checkbox" data-day-check="6"><span>完成</span></label></article>
+        </div>
+        <article class="card experiment-notes"><div><span class="eyebrow">DAILY JOURNAL</span><h2>今天的學習觀察</h2><p>不需要漂亮的心得。記下具體行為、困難與下一個可以改變的環節。</p></div><form id="journal-form"><label>選擇記錄日 <select id="journal-day" name="day"><option value="0">DAY 01</option><option value="1">DAY 02</option><option value="2">DAY 03</option><option value="3">DAY 04</option><option value="4">DAY 05</option><option value="5">DAY 06</option><option value="6">DAY 07</option></select></label><label>今天的證據與反思 <textarea id="journal-text" name="entry" rows="5" maxlength="2000" placeholder="例如：開始前一直想看手機；把手機放到另一個房間後完成了 25 分鐘，但題目仍有兩步不懂…"></textarea></label><button class="btn btn-primary" type="submit">儲存這一天的反思</button><span id="journal-status" role="status"></span></form></article>
+      </section>
+      <section id="page-reflection" class="page" hidden aria-labelledby="reflection-title">
+        <div class="page-intro"><span class="eyebrow">06 / TAKEAWAYS & REFLECTION</span><h1 id="reflection-title">學會學，不是最後一堂課。<br><em>是重新開始的能力。</em></h1><p>這份榮譽作業希望對同學有幫助，也讓我自己願意面對「目前還沒有做到」的部分。</p></div>
+        <div class="reflection-layout"><div class="reflection-essay">
+          <div class="essay-section"><span class="eyebrow">TAKEAWAY 01</span><h2>不讓一次失敗，變成對能力的定論</h2><p>以前遇到不會的數學題，我很容易把挫折跟「我是不是不夠聰明」連在一起。課程中的歸因理論和卡哈爾的故事提醒我：個人的起點不同，但學習方法、練習方式和持續修正同樣重要。把失敗全部怪罪於努力不足也不合理；有時是方法不適合、基礎尚未建立，或沒有得到足夠回饋。</p></div>
+          <div class="essay-section"><span class="eyebrow">TAKEAWAY 02</span><h2>有時最有效率的事情，是先停下來</h2><p>在物理與微積分中，有些難題並不是盯著看越久就越會。認真嘗試之後暫時離開、休息、讓思路重新排列，可能比困在原來的方法裡有效。不過我也要練習分辨「有意識的休息」與「用短影片無限延後」。</p></div>
+          <div class="essay-section"><span class="eyebrow">TAKEAWAY 03</span><h2>教得出來，才知道自己是否真懂</h2><p>當我試著解釋一個觀念，才發現原來「看老師做會」和「我能把每步的理由說清楚」有很大的差距。AI 可以扮演提問者，但不能只是讓 AI 直接給答案。我應該先自己回答，再請 AI 追問假設、指出漏洞，最後回到題目重新獨立完成。</p></div>
+          <div class="essay-section"><span class="eyebrow">TAKEAWAY 04</span><h2>最值得保留的，是可被驗證的習慣</h2><p>如果七天後我的專注時間仍然不多，這不會讓實驗失去意義。相反地，這些真實數據能讓我看見什麼時段容易分心、哪一種題目讓我害怕開始。接下來要調整的是具體條件，而不是用更多負面標籤要求自己改變。</p></div>
+          <div class="essay-section"><span class="eyebrow">OPEN QUESTION</span><h2>我還在思考的問題</h2><p>如果一個人知道所有有效的學習方法，卻因為害怕挫折而遲遲無法開始，那麼學習策略與情緒調節應該先處理哪一個？也許好的學習系統並不是完全消除情緒，而是讓人在不安與不確定中，仍然可以踏出足夠小的一步。</p></div>
+        </div><aside class="reflection-aside"><div class="aside-card card"><span class="eyebrow">WHAT IS REAL?</span><h3>真實紀錄與未來計畫</h3><p><b>已發生：</b>微積分、物理與轉學考準備過程中的拖延困擾；從零架設 AI 虛擬辦公室並讓多個角色依序討論。</p><p><b>正在實驗：</b>番茄鐘、主動回憶、錯題記錄與七日計畫。這些工具可供使用，但不宣稱已完成七天或已證實成績進步。</p></div><div class="aside-card card"><span class="eyebrow">THE CORE MESSAGE</span><h3>開始，不一定要先有信心。</h3><p>信心也可以來自一次次小小的、可以被看見的行動。</p></div><div class="aside-card card"><span class="eyebrow">COURSE & CREDITS</span><h3>參考與致謝</h3><p>ewant《學會學：學習之道》；Barbara Oakley、Terrence Sejnowski 與中文版課程教師的影片內容。</p><p>「準備教別人」實驗參見 Nestojko et al. (2014), <i>Expecting to teach enhances learning and organization of knowledge in free recall of text passages</i>, Memory & Cognition。</p><p>網站文字與互動設計為原創整理；不代表 ewant 官方網站。</p></div></aside></div>
+        <div class="closing-banner card"><span>THE JOURNEY CONTINUES</span><h2>學習不是證明自己永遠不會失敗。<br>是讓下一次嘗試，比上一次更有方向。</h2><button class="btn btn-primary" data-go="tools">開始下一個 25 分鐘 ↗</button></div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 學會學 · 我的學習實驗室</span><span>以學習科學為基礎 · 以真實行動為證據</span><a href="https://github.com/Limerence0527/learning" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
